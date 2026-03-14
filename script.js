@@ -5,14 +5,14 @@ const modeTersimpan = localStorage.getItem("darkMode");
 
 if (modeTersimpan === "aktif") {
     document.body.classList.add("dark-mode");
-    darkToggle.textContent = "🌙 Light Mode";
+    darkToggle.textContent = "☀️ Light Mode";
 }
 
 darkToggle.addEventListener("click", () => {
 
     document.body.classList.toggle("dark-mode");
     const aktif = document.body.classList.contains("dark-mode");
-    darkToggle.textContent = aktif ? "🌙 Light Mode" : "🌙 Dark Mode";
+    darkToggle.textContent = aktif ? "☀️ Light Mode" : "🌙 Dark Mode";
     localStorage.setItem("darkMode", aktif ? "aktif" : "nonaktif");
 
 });
