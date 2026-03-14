@@ -1,0 +1,445 @@
+/* =============================================
+   UNIVERSITAS MUHAMMADIYAH SUMATERA UTARA
+   STYLE.CSS
+============================================= */
+
+:root {
+    /* WARNA UTAMA UMSU */
+    --biru-tua: #0B2A8F;
+    --biru-muda: #1E40AF;
+    --emas: #FACC15;
+    --emas-muda: #FEF08A;
+
+    /* WARNA NETRAL */
+    --putih: #FFFFFF;
+    --abu-gelap: #1E293B;
+    --abu-muda: #64748B;
+    --bg-section: #F8FAFC;
+
+    --shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+/* GLOBAL */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:"Segoe UI", Arial, sans-serif;
+    background-color:var(--putih);
+    color:var(--abu-gelap);
+    line-height:1.6;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+/* NAVBAR */
+
+#navbar{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background-color:var(--biru-tua);
+    box-shadow:var(--shadow);
+    transition:all 0.3s ease;
+}
+
+.navbar-container{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    max-width:1200px;
+    margin:auto;
+    padding:16px 24px;
+}
+
+.navbar-logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo-bulat{
+    width:52px;
+    height:52px;
+    background:var(--putih);
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:bold;
+    color:var(--biru-tua);
+}
+
+.logo-teks{
+    display:flex;
+    flex-direction:column;
+}
+
+.logo-nama{
+    color:var(--putih);
+    font-weight:bold;
+    font-size:15px;
+}
+
+.logo-sub{
+    color:var(--emas);
+    font-size:11px;
+}
+
+.navbar-menu{
+    display:flex;
+    gap:28px;
+}
+
+.menu-link{
+    color:var(--putih);
+    text-decoration:none;
+    font-size:14px;
+    font-weight:500;
+    padding:6px 0;
+    border-bottom:2px solid transparent;
+    transition:0.3s;
+}
+
+.menu-link:hover{
+    border-bottom-color:var(--emas);
+}
+
+/* DARK BUTTON */
+
+.tombol-dark{
+    background:transparent;
+    border:2px solid var(--emas);
+    color:var(--emas);
+    padding:8px 16px;
+    border-radius:20px;
+    cursor:pointer;
+    font-size:13px;
+    transition:0.3s;
+}
+
+.tombol-dark:hover{
+    background:var(--emas);
+    color:var(--biru-tua);
+}
+
+/* HERO */
+
+#hero{
+    min-height:85vh;
+    background-color:var(--biru-tua);
+    background-image:linear-gradient(
+        135deg,
+        rgba(11,42,143,0.95) 0%,
+        rgba(30,64,175,0.9) 50%,
+        rgba(11,42,143,0.95) 100%
+    );
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.hero-overlay{
+    width:100%;
+    padding:80px 24px;
+}
+
+.hero-konten{
+    max-width:800px;
+    margin:auto;
+    text-align:center;
+}
+
+.hero-label{
+    color:var(--emas);
+    font-size:16px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    margin-bottom:16px;
+}
+
+.hero-judul{
+    color:var(--putih);
+    font-size:52px;
+    font-weight:800;
+    margin-bottom:24px;
+}
+
+.hero-sub{
+    color:rgba(255,255,255,0.85);
+    font-size:18px;
+    margin-bottom:40px;
+}
+
+/* HERO BUTTON */
+
+.hero-tombol-grup{
+    display:flex;
+    gap:16px;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+.tombol-utama{
+    background:var(--emas);
+    color:var(--biru-tua);
+    padding:14px 32px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:700;
+    transition:0.3s;
+}
+
+.tombol-utama:hover{
+    background:var(--emas-muda);
+    transform:translateY(-2px);
+}
+
+.tombol-outline{
+    border:2px solid var(--putih);
+    color:var(--putih);
+    padding:14px 32px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:700;
+}
+
+.tombol-outline:hover{
+    background:var(--putih);
+    color:var(--biru-tua);
+}
+
+/* STATISTIK */
+
+#statistik{
+    background:var(--biru-tua);
+    padding:60px 24px;
+}
+
+.statistik-container{
+    display:flex;
+    justify-content:space-around;
+    flex-wrap:wrap;
+    gap:40px;
+}
+
+.stat-item{
+    text-align:center;
+    color:var(--putih);
+}
+
+.stat-angka{
+    font-size:56px;
+    font-weight:800;
+    color:var(--emas);
+}
+
+.stat-label{
+    font-size:15px;
+    margin-top:8px;
+}
+
+/* SECTION */
+
+.section-wrapper{
+    max-width:1200px;
+    margin:auto;
+    padding:80px 24px;
+}
+
+.section-header{
+    text-align:center;
+    margin-bottom:56px;
+}
+
+.section-judul{
+    font-size:36px;
+    font-weight:800;
+    margin-bottom:12px;
+}
+
+.section-sub{
+    font-size:16px;
+    color:var(--abu-muda);
+}
+
+/* PROGRAM */
+
+#program{
+    background:var(--bg-section);
+}
+
+.program-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:28px;
+}
+
+.program-kartu{
+    background:var(--putih);
+    border-radius:12px;
+    padding:36px 28px;
+    box-shadow:var(--shadow);
+    transition:0.3s;
+}
+
+.program-kartu:hover{
+    transform:translateY(-6px);
+    border-top:4px solid var(--emas);
+}
+
+.kartu-judul{
+    font-size:20px;
+    font-weight:700;
+    margin-bottom:12px;
+}
+
+.kartu-deskripsi{
+    font-size:14px;
+    color:var(--abu-muda);
+}
+
+/* BERITA */
+
+.berita-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:28px;
+}
+
+.berita-kartu{
+    background:var(--putih);
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:var(--shadow);
+}
+
+.berita-kartu:hover{
+    transform:translateY(-4px);
+}
+
+.berita-gambar{
+    height:160px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:56px;
+    background:var(--bg-section);
+}
+
+.berita-isi{
+    padding:20px;
+}
+
+.berita-tanggal{
+    font-size:12px;
+    color:var(--abu-muda);
+}
+
+.berita-judul{
+    font-size:15px;
+    font-weight:700;
+    margin:8px 0;
+}
+
+/* SAMBUTAN */
+
+.sambutan-container{
+    display:flex;
+    gap:60px;
+    align-items:center;
+}
+
+.foto-rektor{
+    width:220px;
+    height:220px;
+    border-radius:50%;
+    background:var(--bg-section);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:80px;
+    border:4px solid var(--emas);
+}
+
+/* FOOTER */
+
+#footer{
+    background:var(--abu-gelap);
+    color:var(--putih);
+}
+
+.footer-container{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr 1fr;
+    gap:48px;
+    max-width:1200px;
+    margin:auto;
+    padding:60px 24px;
+}
+
+.footer-logo{
+    width:56px;
+    height:56px;
+    background:var(--emas);
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:bold;
+    color:var(--biru-tua);
+}
+
+.footer-judul-kolom{
+    color:var(--emas);
+    font-size:14px;
+    font-weight:700;
+    margin-bottom:20px;
+}
+
+.footer-link{
+    display:block;
+    color:rgba(255,255,255,0.7);
+    text-decoration:none;
+    margin-bottom:10px;
+}
+
+.footer-link:hover{
+    color:var(--emas);
+}
+
+.footer-bawah{
+    text-align:center;
+    padding:20px;
+    border-top:1px solid rgba(255,255,255,0.1);
+    font-size:13px;
+    color:rgba(255,255,255,0.4);
+}
+
+/* DARK MODE */
+
+body.dark-mode{
+    background:#0F172A;
+    color:#E2E8F0;
+}
+
+body.dark-mode .program-kartu,
+body.dark-mode .berita-kartu{
+    background:#1E293B;
+}
+
+/* NAVBAR SCROLL */
+
+#navbar.navbar-scroll{
+    background:rgba(11,42,143,0.95);
+    box-shadow:0 4px 24px rgba(0,0,0,0.25);
+}
+
+#navbar.navbar-scroll .navbar-container{
+    padding:10px 24px;
+}
